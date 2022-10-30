@@ -1,0 +1,235 @@
+html { 
+    box-sizing: border-box; 
+}
+
+*, ::after, ::before {
+    box-sizing: inherit; 
+}
+
+
+body {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    background-color: #FAFAFA;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.podtrzeni{
+    background-color: #407BFF;
+    width: 50px;
+    height: 3px;
+    margin-bottom: 30px;
+}
+
+button{
+    background-color: #8B8B8B;  
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 20px;
+    margin: 10px 10px 0 10px;
+    font-size: 14px;
+    display: block;   
+}
+
+.vybrany{
+    background-color: #407BFF  
+}
+
+h1{
+    text-align:center;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2{
+    text-align:center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.naStred{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nabidka{
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px #407BFF1F;
+    border-radius: 10px;
+    vertical-align:middle;
+    position: relative;
+    height: 80px;
+}
+
+.nabidka img{
+    position: absolute;
+    left:18px;
+    top:18px;
+}
+
+.nabidka div{
+    height: 28px;
+    position: absolute;
+    top:29px;
+    left:95px;
+}
+
+.center-h {
+    display: grid;
+    justify-content: center;
+}
+
+section{
+    margin-top: 60px;
+}
+
+
+@media screen and (min-width: 641px) {
+
+    button{
+        display: inline; 
+    }
+
+    .center-h {
+        display: flex;
+        justify-content: center;
+    }  
+    
+    .kontejner {
+        display: flex;
+    }
+    .nabidka {
+        flex: 1 1 calc(100% / 3);
+        height: 172px;
+        margin-right: 20px;
+    }
+
+    .nabidka img{
+        position: absolute;
+        left:calc(50% - 22px);
+        top:40px;
+    }
+    
+    .nabidka div{
+        height: 28px;
+        position: absolute;
+        top:100px;
+        left:15px;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+    body {
+        max-width: 1900px;
+        justify-content: center;
+        margin:0 auto;
+    }
+
+    .kontejnerA {
+        display: flex;
+        position: relative;
+        height: 400px;
+    }
+    .uvodni {
+        flex: 1 1 calc(100% / 2);
+        height: 172px;
+        margin-right: 20px;
+    }
+
+    #travelerPict{
+        right:0;
+        position: absolute;
+        width: calc(100% / 2);
+        max-width: 490px;
+        justify-content: center;
+    }
+
+    #travelerText{
+        left:0;
+        position: absolute;
+        width: calc(100% - 520px); 
+        padding-left: 0;
+        margin-left: 0;       
+    }
+
+    h1{
+        text-align:left;
+        padding-left: 0;
+    }
+
+    .naStred{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .center-h {
+        display: flex;
+        justify-content: left;
+    }
+
+    .podtrzeni {
+        margin-left: 0;
+    }
+
+    .kontejner {
+        display:inline;
+    }
+
+    .nabidka {
+        width: calc(((100% / 2) + 10%) / 3);
+        height: 172px;
+        margin-right: 20px;
+        display:inline-flex;
+    }
+
+    section {
+        position: relative;
+    }
+
+    .text-o-sluzbe-A {
+        right:0;
+        position: absolute;
+        width: calc(((100% / 2) - 10%) - 120px);
+    }
+
+    .text-o-sluzbe-A h2{
+        left:0;
+        position: absolute;
+    }
+
+    .text-o-sluzbe-A .naStred{
+        position: absolute;
+        top:60px;
+    }
+
+    .text-o-sluzbe-B {
+        left:0;
+        position: absolute;
+        width: calc(((100% / 2) - 10%) - 120px);
+    }
+
+    .text-o-sluzbe-B h2{
+        left:0;
+        position: absolute;
+    }
+    
+    .text-o-sluzbe-B .naStred{
+        position: absolute;
+        top:60px;
+    }   
+    
+    .kontejnerB{
+        left:calc(((100% / 2) - 10%) - 100px);
+        position: absolute;
+        width: calc(100% );
+    }
+}
