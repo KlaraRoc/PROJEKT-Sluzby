@@ -1,3 +1,4 @@
+
 html { 
     box-sizing: border-box; 
 }
@@ -8,21 +9,28 @@ html {
 
 
 body {
+    width: 100%;
+    justify-content:center;
+    display: flex; 
     font-family: 'Montserrat';
     font-size: 16px;
-    background-color: #FAFAFA;
-    padding-left: 3%;
-    padding-right: 3%;
+    background-color: #FAFAFA;   
 }
 
-.podtrzeni{
+.konterjner0 {
+    max-width: 1040px; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.podtrzeni {
     background-color: #407BFF;
-    width: 50px;
-    height: 3px;
+    width: 60px;
+    height: 2px;
     margin-bottom: 30px;
 }
 
-button{
+button {
     background-color: #8B8B8B;  
     color: white;
     border: 0;
@@ -34,65 +42,169 @@ button{
     display: block;   
 }
 
-.vybrany{
+.vybrany {
     background-color: #407BFF  
 }
 
-h1{
+h1 {
     text-align:center;
     font-weight: bold;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-h2{
+h2 {
     text-align:center;
-    font-weight: bold;
+    font: normal normal medium 16px/21px Montserrat;
     font-size: 16px;
 }
 
-.naStred{
+.naStred {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.nabidka{
+.nabidka {
     background-color: white;
     margin-bottom: 15px;
     box-shadow: 0px 4px 6px #407BFF1F;
     border-radius: 10px;
     vertical-align:middle;
-    position: relative;
     height: 80px;
+    font-size: 13px;
 }
 
-.nabidka img{
-    position: absolute;
-    left:18px;
-    top:18px;
-}
 
-.nabidka div{
-    height: 28px;
-    position: absolute;
-    top:29px;
-    left:95px;
-}
 
-.center-h {
-    display: grid;
+/* === mobil =================================================================================================================================== */
+
+.kontejnerZ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-section{
-    margin-top: 60px;
+.kontejnerZ1 {
+    order:1;
+}
+
+.kontejnerZ2 {
+    order:2;
+    text-align: left;
+}
+.kontejnerZ2 h1 {
+    text-align: center;
+}
+
+.tlacitka {
+    display: flex;
+    justify-content: center;   
+}
+
+.tlacitka2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.naStred {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-h {
+    display: flex;
+    justify-content: center;
+}
+
+.podtrzeni {
+    margin-left: 0;
+}
+
+.kontejner {
+    display:inline;
+    order:1;
 }
 
 
+
+.kontejnerA {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.kontejnerA2 {
+    order:2;
+    height: 172px;
+}
+
+.text-o-sluzbe-A {
+    order: 1;
+}
+
+.kontejnerB {
+    display: flex;
+
+    /* height: 191px; */
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.kontejnerB2 {
+    order:2;
+    height: 172px;
+}
+
+.text-o-sluzbe-B {
+    order: 1;
+}
+
+
+.nabidka {
+    width: 100%;
+    height: 80px;
+    margin-right: 20px;
+    display:inline-flex;
+    vertical-align:bottom; 
+}
+
+.nabidka img {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 45px;
+}
+.nabidka p {
+    margin-top: 32px;
+}
+
+
+
+
+/* === tablet =================================================================================================================================== */
+
 @media screen and (min-width: 641px) {
 
-    button{
-        display: inline; 
+    .kontejnerZ {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tlacitka {
+        display: flex;
+        justify-content: center;
+        flex-direction: row; 
+    }
+   
+    .tlacitka2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;    
+    }
+
+    button {
+        /* display: inline;  */
     }
 
     .center-h {
@@ -100,78 +212,80 @@ section{
         justify-content: center;
     }  
     
-    .kontejner {
+
+    .kontejnerA2 {
         display: flex;
-    }
-    .nabidka {
-        flex: 1 1 calc(100% / 3);
-        height: 172px;
-        margin-right: 20px;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-between;
     }
 
-    .nabidka img{
-        position: absolute;
-        left:calc(50% - 22px);
-        top:40px;
+    .kontejnerB2 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-between;
     }
     
-    .nabidka div{
-        height: 28px;
-        position: absolute;
-        top:100px;
-        left:15px;
-        text-align: center;
-        padding-right: 10px;
+    .kontejnerB {
+        margin-top: 80px;
     }
 
-    #travelerPict {
+    .nabidka {
+        width: 230px;
+        height: 172px;
+        margin-right: 20px;
+        display: flex;
+        order:1;
+        flex-direction: column;        
+        height: 172px;
+    }
+
+    .nabidka img {
+        margin-left: 93px;
+        margin-top: 40px;
+    }
+
+    .nabidka p {
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .naStred {
+        margin-bottom: 15px;
+    }
+
+    .travelerPict {
         content: url("imgs/happy-traveler2.svg");        
     }  
 
 }
 
+/* === desktop =================================================================================================================================== */
+
 @media screen and (min-width: 1100px) {
 
-    body {
-        max-width: 1040px;
-        justify-content: center;
-        margin:0 auto;        
-    }
-
-    .kontejnerA {
+    .kontejnerZ {
         display: flex;
-        position: relative;
-        height: 400px;
-    }
-    .uvodni {
-        flex: 1 1 calc(100% / 2);
-        height: 172px;
-        margin-right: 20px;
+        height: 332px;
+        flex-direction:row;
+        flex-wrap:nowrap;
     }
 
-    #travelerPict{
-        right:-60px;
-        position: absolute;
-        width: calc(100% / 2);
-        max-width: 490px;
-        justify-content: center;
+    .kontejnerZ1 {
+        order:2;
     }
 
-    #travelerText{
-        left:0;
-        position: absolute;
-        width: calc(100% - 520px); 
-        padding-left: 0;
-        margin-left: 0;       
+    .kontejnerZ2 {
+        order:1;
+        text-align: left;
+    }
+    .kontejnerZ2 h1 {
+        text-align: left;
     }
 
-    h1{
-        text-align:left;
-        padding-left: 0;
-        padding-top: 30px;
-    }
-
-    .naStred{
+    .naStred {
         text-align: left;
         margin-bottom: 30px;
     }
@@ -185,8 +299,8 @@ section{
         margin-left: 0;
     }
 
-    .kontejner {
-        display:inline;
+    .tlacitka {
+        justify-content: left;
     }
 
     .nabidka {
@@ -196,45 +310,59 @@ section{
         display:inline-flex;
     }
 
-    section {
-        position: relative;
+    .nabidka img {
+        margin-left: 63px;
+    }
+
+
+    .kontejnerA {
+        display: flex;
+        height: 191px;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 80px;
+    }
+
+    .kontejnerA2 {
+        order:1;
     }
 
     .text-o-sluzbe-A {
-        right:0;
-        position: absolute;
-        width: calc(((100% / 2) - 10%) - 30px);
+        order: 2;
+        margin-top: 40px;  
+        margin-left: 40px; 
     }
 
     .text-o-sluzbe-A h2{
-        left:0;
-        position: absolute;
+        text-align: left; 
+    } 
+
+
+
+    .kontejnerB {
+        display: flex;
+        height: 191px;
+        flex-direction: row;
+        margin-top: 10px;
     }
 
-    .text-o-sluzbe-A .naStred{
-        position: absolute;
-        top:60px;
+    .kontejnerB2 {
+        order:2;        
     }
 
     .text-o-sluzbe-B {
-        left:0;
-        position: absolute;
-        width: calc(((100% / 2) - 10%) + 40px);
+        order: 1;
+        width: 460px;
+        margin-top: 70px;  
+        margin-right: 20px;     
     }
 
-    .text-o-sluzbe-B h2{
-        left:0;
-        position: absolute;
+    .text-o-sluzbe-B h2 {
+        text-align: left; 
+    } 
+
+    .text-o-sluzbe-B .naStred {
+        width: 430px;        
     }
     
-    .text-o-sluzbe-B .naStred{
-        position: absolute;
-        top:60px;
-    }   
-    
-    .kontejnerB{
-        left:calc(((100% / 2) - 10%) + 80px);
-        position: absolute;
-        width: calc(100% );
-    }
 }
